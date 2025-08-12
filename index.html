@@ -1220,28 +1220,6 @@
         });
     }
 
-    // Video fallback for mobile
-    const heroVideo = document.querySelector('.hero-video');
-    if (heroVideo) {
-        // Check if mobile device and autoplay is not supported
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        if (isMobile) {
-            // Replace video with poster image
-            const videoParent = heroVideo.parentElement;
-            const posterImg = document.createElement('img');
-            posterImg.src = 'https://images.unsplash.com/photo-1600566752227-8f3b54020e6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-            posterImg.alt = 'HVAC System';
-            posterImg.style.width = '100%';
-            posterImg.style.height = '100%';
-            posterImg.style.objectFit = 'cover';
-            posterImg.style.position = 'absolute';
-            posterImg.style.top = '0';
-            posterImg.style.left = '0';
-            posterImg.style.zIndex = '-1';
-            
-            videoParent.replaceChild(posterImg, heroVideo);
-        }
-    }
 
     // Initialize Google Maps (placeholder - you would need a real API key)
     function initMap() {
@@ -1263,4 +1241,5 @@
         loadGoogleMaps();
     }
 </script>
+
 
